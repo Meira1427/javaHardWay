@@ -1,7 +1,7 @@
 public class MathOperations{
 	public static void main(String[] args){
-		int a, b, c, d, e, f, g;
-		double x, y, z;
+		int a, b, c, d, e, f, g, h;
+		double x, y, z, w;
 		String one, two, both;
 		
 		a = 10;
@@ -31,5 +31,10 @@ public class MathOperations{
 		two = "house";
 		both = one + two;
 		System.out.println(both);
+		
+		h = (a*b)%3;
+		w = z+x;
+		System.out.println("New int variable h is " + h);
+		System.out.println("New double variable w is " + w);
 	}
 }
