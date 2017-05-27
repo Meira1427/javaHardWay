@@ -12,7 +12,12 @@ public class RudeQuestions {
 		System.out.print("Hello. What is your name?");
 		name = keyboard.next();
 		
-		System.out.print("Hi, " + name + "! How old are you?");
+		System.out.println("Hi, " + name + "! How old are you?");
+		//protect the variable by requiring an integer
+		while(!keyboard.hasNextInt()){
+			System.out.println("Enter only an integer. Your age!");
+			keyboard.next();
+		}
 		age = keyboard.nextInt();
 		
 		System.out.println("So you're " + age + ", eh? That's not very old?");
