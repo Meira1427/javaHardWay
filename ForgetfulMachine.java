@@ -16,6 +16,11 @@ public class ForgetfulMachine {
 		System.out.println("Is there anything else you would like to say?");
 		keyboard.next();
 		
+		//The second questions blows up when I type a double instead of an integer
+		
+		/*The third question does not blow up when I type an integer larger than 1.0
+		because it just converts it to a double. It isn't checking whether I really entered
+		a number between 0.0 and 1.0. However, it does blow up when I type "test"*/
 		
 	}
 }
