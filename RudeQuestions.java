@@ -27,5 +27,13 @@ public class RudeQuestions {
 		System.out.print("Well, thanks for answering my rude questions, ");
 		System.out.println(name + ".");
 		
+		/* #1. Program doesn't blow up when I enter an integer if it is expecting a 
+		double. It just stores my integer as a double*/
+		/* #2. Program does NOT blow up when I enter a number instead of a string.
+		Just stores the number as a string */
+		/* #3. When the program is expecting a string, I could get it to blow up by 
+		entering a formula 47+67. Any number is easy to blow up by entering one letter
+		or a string of letters. The age will fail if I enter a fraction.  The numbers 
+		also appear to blow up if I enter a formula or just a mathematical symbol.*/
 	}
 }
