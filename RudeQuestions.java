@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class RudeQuestions {
 	public static void main (String[] args) {
-		String name;
+		String name, answer;
 		int age;
 		double weight, income;
 		
@@ -26,6 +26,11 @@ public class RudeQuestions {
 		System.out.println(" and not per year!");
 		System.out.print("Well, thanks for answering my rude questions, ");
 		System.out.println(name + ".");
+		
+		System.out.println("What do you think of my manners?");
+		answer = keyboard.next();
+		System.out.println("I'm sorry to hear that. So you really think I'm " + answer + "?");
+		System.out.println("Nice to meet you too!");
 		
 		/* #1. Program doesn't blow up when I enter an integer if it is expecting a 
 		double. It just stores my integer as a double*/
