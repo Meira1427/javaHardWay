@@ -25,5 +25,11 @@ public class AgeMessages {
 			System.out.println("\ttoo young to run for President of the U.S.");
 			System.out.println("\t\t(How sad!)");
 		}
+		if (age >= 65) {
+			System.out.println("\told enough to retire!");
+		}
+		/* #1. If I type an age greater than or equal to 35, the only thing that gets
+		printed is "You are: " because all other conditions evaluate to false */
+		/* #2. Adding check for greater than or equal to 65*/
 	}
 }
