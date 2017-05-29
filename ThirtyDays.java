@@ -9,17 +9,21 @@ public class ThirtyDays {
 		System.out.print("Which month? (1-12) ");
 		month = keyboard.nextInt();
 		
+		/*
+		remove some breaks and put in print statements to show that it keeps moving
+		through the code until it encounters a break statement
+		*/
 		switch(month) {
 		case 1:  monthName = "January";
 				 break;
 		case 2:  monthName = "February";
-				 break;
+				 System.out.println(monthName);
 		case 3:  monthName = "March";
-				 break;
+				 System.out.println(monthName);
 		case 4:  monthName = "April";
-				 break;
+				 System.out.println(monthName);
 		case 5:  monthName = "May";
-				 break;
+				 System.out.println(monthName);
 		case 6:  monthName = "June";
 				 break;
 		case 7:  monthName = "July";
