@@ -28,8 +28,8 @@ public class GenderTitles {
 					title = "Ms. ";
 				}
 			}
-			
-			else {
+			//will not compile because now title isn't guaranteed a value
+			if (gender.equals("M")){
 				title = "Mr. ";
 			}
 		}
