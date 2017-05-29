@@ -17,6 +17,8 @@ public class SecretWord {
 		else {
 			System.out.println("No, the secret word isn't \"" + guess + "\".");
 		}
+		
+		//cannot use == with strings
 		if (guess == secret) {
 			System.out.println("(This will never ever show, no matter what.)");
 		}
