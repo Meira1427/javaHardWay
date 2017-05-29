@@ -6,24 +6,30 @@ public class ThirtyDays {
 		int month, days;
 		String monthName;
 		
+		//prompt for month; loop until user enters an integer
 		System.out.print("Which month? (1-12) ");
+		while(!keyboard.hasNextInt()){
+			System.out.print("Enter a number please (1-12) ");
+			keyboard.next();
+		}
 		month = keyboard.nextInt();
 		
-		/*
-		remove some breaks and put in print statements to show that it keeps moving
-		through the code until it encounters a break statement
-		*/
+		//continue if integer, but print error message if not between 1-12
+		if (month < 1 || month > 12){
+			System.out.println("You have entered an invalid month");
+		}
+		
 		switch(month) {
 		case 1:  monthName = "January";
 				 break;
 		case 2:  monthName = "February";
-				 System.out.println(monthName);
+				 break;
 		case 3:  monthName = "March";
-				 System.out.println(monthName);
+				 break;
 		case 4:  monthName = "April";
-				 System.out.println(monthName);
+				 break;
 		case 5:  monthName = "May";
-				 System.out.println(monthName);
+				 break;
 		case 6:  monthName = "June";
 				 break;
 		case 7:  monthName = "July";
