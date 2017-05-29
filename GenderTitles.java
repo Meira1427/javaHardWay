@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class GenderTitles {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
-		String title;
+		String title = "title";
 		
 		System.out.print("First name: ");
 		String first = keyboard.next();
@@ -12,24 +12,30 @@ public class GenderTitles {
 		System.out.print("Gender (M/F): ");
 		String gender = keyboard.next();
 		System.out.print("Age: ");
+		//add error checking for the nextInt
+		while(!keyboard.hasNextInt()){
+			System.out.print("Enter a number please. Your age: ");
+			keyboard.next();
+		}
 		int age = keyboard.nextInt();
 		
 		if (age < 20) {
 			title = first;
 		}
+		//add options for lower case responses
 		else {
-			if (gender.equals("F")) {
+			if (gender.equals("F") || gender.equals("f")) {
 				System.out.print("Are you married, " + first + "? (Y/N): ");
 				String married = keyboard.next();
-				if(married.equals("Y")) {
+				if(married.equals("Y") || married.equals("y")) {
 					title = "Mrs. ";
 				}
 				else{
 					title = "Ms. ";
 				}
 			}
-			//will not compile because now title isn't guaranteed a value
-			if (gender.equals("M")){
+			
+			if (gender.equals("M") || gender.equals("m")){
 				title = "Mr. ";
 			}
 		}
