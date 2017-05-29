@@ -9,7 +9,6 @@ public class BMICategories {
 		bmi = keyboard.nextDouble();
 	
 		System.out.print("BMI category: ");
-	
 		if (bmi < 15.0) {
 			System.out.println("very severely underweight");
 		}
@@ -19,7 +18,11 @@ public class BMICategories {
 		else if (bmi < 18.5) {
 			System.out.println("underweight");
 		}
-		else if (bmi < 25.0) {
+		/* #1. if we remove the else from here, we start a new batch of if. . . else
+		statements. So if you type in 15.5 you will get a message from above this comment
+		and another message from below this comment.
+		*/
+		if (bmi < 25.0) {
 			System.out.println("normal weight");
 		}
 		else if (bmi < 30.0) {
