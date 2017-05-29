@@ -11,25 +11,27 @@ public class ComparingNumbers {
 		second = keyboard.nextDouble();
 		
 		/*
-		#2. Remove curly braces from all of the if statements and add to final statements.
-		Since they are all one line each, this should work smoothly.
+		Returning this file to original formatting. I prefer to leave all the curly
+		braces in.
 		*/
 		
-		if (first < second)
+		if (first < second){
 			System.out.println(first + " is LESS THAN " + second);
-		if (first <= second)
+			}
+		if (first <= second){
 			System.out.println(first + " is LESS THAN/EQUAL TO " + second);
-		if (first == second)
+			}
+		if (first == second){
 			System.out.println(first + " is EQUAL TO " + second);
-		if (first >= second)
+			}
+		if (first >= second){
 			System.out.println(first + "is GREATER THAN/EQUAL to " + second);
-		if (first > second)
+			}
+		if (first > second){
 			System.out.println(first + " is GREATER THAN " + second);
-		//no curly braces on last line okay as long as only one line of code
-		// #1. try adding a "Hey". It prints every time.
+			}
 		if (first != second) {
 			System.out.println(first + " is NOT EQUAL TO " + second);
-			System.out.println("Hey.");
 			}
 
 	}
