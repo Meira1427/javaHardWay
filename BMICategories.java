@@ -3,12 +3,20 @@ import java.util.Scanner;
 public class BMICategories {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
-		double bmi;
+		double height, weight, meters, kg, bmi;
 	
-		System.out.print("Enter your BMI: ");
-		bmi = keyboard.nextDouble();
+		System.out.print("Enter your height in inches: ");
+		height = keyboard.nextDouble();
+		
+		System.out.print("Enter your weight in pounds: ");
+		weight = keyboard.nextDouble();
+		
+		meters = height*.0254;
+		kg = weight*.453592;
+		
+		bmi = kg/(meters*meters);
 	
-		System.out.print("BMI category: ");
+		System.out.print("Your BMI is " + bmi + "\nBMI category: ");
 		if (bmi < 15.0) {
 			System.out.println("very severely underweight");
 		}
@@ -18,11 +26,7 @@ public class BMICategories {
 		else if (bmi < 18.5) {
 			System.out.println("underweight");
 		}
-		/* #1. if we remove the else from here, we start a new batch of if. . . else
-		statements. So if you type in 15.5 you will get a message from above this comment
-		and another message from below this comment.
-		*/
-		if (bmi < 25.0) {
+		else if (bmi < 25.0) {
 			System.out.println("normal weight");
 		}
 		else if (bmi < 30.0) {
