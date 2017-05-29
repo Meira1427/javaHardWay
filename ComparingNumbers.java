@@ -25,8 +25,11 @@ public class ComparingNumbers {
 		if (first > second) {
 			System.out.println(first + " is GREATER THAN " + second);
 		}
+		//no curly braces on last line okay as long as only one line of code
+		// #1. try adding a "Hey". It prints every time.
 		if (first != second)
 			System.out.println(first + " is NOT EQUAL TO " + second);
+			System.out.println("Hey.");
 
 	}
 }
