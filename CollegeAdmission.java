@@ -12,18 +12,18 @@ public class CollegeAdmission {
 		
 		out.print("Admission status: ");
 		
-		// #1. remove the elses to check behavior.
+		// #2. moving the "unlikely" case to near the top, messes up the order
 		
 		if (math >= 790)
 			out.print("CERTAIN ");
-		if (math >= 710)
-			out.print("SAFE ");
-		if (math >= 580)
-			out.print("PROBABLE ");
-		if (math >= 500)
-			out.print("UNCERTAIN ");
-		if (math >= 390)
+		else if (math >= 390)
 			out.print("UNLIKELY ");
+		else if (math >= 710)
+			out.print("SAFE ");
+		else if (math >= 580)
+			out.print("PROBABLE ");
+		else if (math >= 500)
+			out.print("UNCERTAIN ");
 		else // below 390
 			out.print("DENIED ");
 			
