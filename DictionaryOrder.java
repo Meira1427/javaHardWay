@@ -7,6 +7,7 @@ public class DictionaryOrder {
 		
 		System.out.print("Make up the name of a programming language! ");
 		name = keyboard.nextLine();
+		name = name.toLowerCase();
 		
 		if(name.compareTo("c++") < 0)
 			System.out.println(name + " comes BEFORE c++");
