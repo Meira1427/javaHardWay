@@ -10,6 +10,10 @@ public class HighLow {
 		System.out.println("I'm thinking of a number between 1-100.");
 		System.out.println("Try to guess it!");
 		System.out.print("> ");
+		while(!keyboard.hasNextInt()){ //error-checking, so program won't crash
+			System.out.print("Only a number between 1-100, please >");
+			keyboard.next();
+		}
 		guess = keyboard.nextInt();
 		
 		while(secret != guess) {
@@ -20,10 +24,14 @@ public class HighLow {
 				System.out.print("Sorry, your guess is too high.");
 			}
 			System.out.print(" Try again.\n>");
+			while(!keyboard.hasNextInt()){
+				System.out.print("Only a number between 1-100, please >");
+				keyboard.next();
+			}
 			guess = keyboard.nextInt();
 		}
 		
-		System.out.println("You guessed it! What are the odds?!?");
+		System.out.println("You guessed it! ** " + secret + " ** What are the odds?!?");
 	
 	}
 }
