@@ -67,5 +67,12 @@ public class RandomNumbers{
 		b = 1 + (int)(3*Math.random());
 		c = 1 + (int)(3*Math.random());
 		System.out.println("1-3:\t" + a + "\t" + b + "\t" + c);
+		
+		//3 random integers from 5-10
+		a = 5 + (int)(6*Math.random());
+		b = 5 + (int)(6*Math.random());
+		c = 5 + (int)(6*Math.random());
+		System.out.println("1-3:\t" + a + "\t" + b + "\t" + c);
+		
 	}
 }
