@@ -10,11 +10,20 @@ public class KeepGuessing {
 		System.out.println("I have chosen a number between 1 and 10");
 		System.out.println("Try to guess it.");
 		System.out.print("Your guess: ");
+		while(!keyboard.hasNextInt()){
+			System.out.print("Please guess a number between 1 and 10: ");
+			keyboard.next();
+		}
 		guess = keyboard.nextInt();
 		
 		while (secret != guess) {
 			System.out.println("That is incorrect. Guess again.");
 			System.out.print("Your guess: ");
+			while(!keyboard.hasNextInt()){
+				System.out.print("Please guess a number between 1 and 10: ");
+				keyboard.next();
+			}
+			guess = keyboard.nextInt();
 		}
 	
 		System.out.println("That's right! You're a good guesser.");
