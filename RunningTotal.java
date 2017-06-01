@@ -13,7 +13,9 @@ public class RunningTotal {
 			System.out.print("Value: ");
 			current = keyboard.nextInt();
 			total += current;
-			System.out.println("The total so far is: " + total);
+			if (current != 0) {
+				System.out.println("The total so far is: " + total);
+			}
 		} while (current != 0); 
 		
 		System.out.println("The final total is: " + total);
