@@ -7,9 +7,7 @@ public class CoinFlip {
 		int streak = 0;
 		boolean gotHeads;
 		
-		again = "y";
-		
-		while (again.equals("y")) {
+		do {
 			gotHeads = Math.random() < 0.5;
 			
 			if (gotHeads) {
@@ -33,7 +31,7 @@ public class CoinFlip {
 				streak = 0;
 				again = "n";
 			}
-		} 
+		} while (again.equals("y"));
 			
 			System.out.println("Final score: " + streak);
 	}
