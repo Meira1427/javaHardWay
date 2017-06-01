@@ -26,13 +26,23 @@ public class CoinFlip {
 				again = keyboard.next();
 			}
 			else {
-				System.out.println("\tYou lose everything!");
-				System.out.println("\tShould've quit while you were aHEAD. . .");
-				streak = 0;
+				/*
+				adding two branches here. You don't "lose everything" if you happen
+				to get a TAILS the first time around.
+				*/
+				if (streak > 0) {
+					System.out.println("\tYou lose everything!");
+					System.out.println("\tShould've quit while you were aHEAD. . .");
+					streak = 0;
+				}
+				else {
+					System.out.println("Tails, you lose.");
+				}
 				again = "n";
 			}
 		} while (again.equals("y"));
 			
-			System.out.println("Final score: " + streak);
+		System.out.println("Final score: " + streak);
+		
 	}
 }
