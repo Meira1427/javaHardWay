@@ -19,7 +19,7 @@ public class HeronsFormula {
 	public static double triangleArea(int a, int b, int c) {
 		double s, A;
 		
-		s = (a + b + c) / 2;
+		s = (a + b + c) / 2.0;
 		A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
 		
 		// After computing the area, you must "return" the computed value:
@@ -27,4 +27,6 @@ public class HeronsFormula {
 	}
 	
 	// #1. the file without functions is much longer with lots of repetitive code
+	// #2. much easier to fix the formula in this file than it would be in
+	//     file without functions
 }
