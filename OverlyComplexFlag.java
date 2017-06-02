@@ -10,6 +10,10 @@ public class OverlyComplexFlag {
 		print48Ohs();
 		print48Colons();
 		print48Ohs();
+		
+		printLine();
+		printPledge();
+		
 	
 	}
 	
@@ -25,8 +29,16 @@ public class OverlyComplexFlag {
 		out.println("|:::::::::::::::::::::::::::::|");
 	}
 	
+	/* 
+	#2. This is originally defined by never called. Editing program to call function
+	*/
 	public static void printPledge() {
-		out.println("I pledge allegiance to the flag.");
+		out.println("\nI pledge allegiance to the flag.\n");
+	}
+	
+	//adding a printLine function
+	public static void printLine() {
+		out.println(" ________________________________________________");
 	}
 	
 	public static void print29Ohs() {
@@ -52,7 +64,7 @@ public class OverlyComplexFlag {
 	}
 	
 	public static void printTopHalf() {
-		out.println(" ________________________________________________");
+		printLine();
 		printSixStarLine();
 		printFiveStarLine();
 		printSixStarLine();
