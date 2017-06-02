@@ -1,6 +1,6 @@
 public class YachtDice {
 	public static void main(String[] args) {
-		int r1, r2, r3, r4, r5;
+		int r1, r2, r3, r4, r5, r6;
 		boolean allSame;
 		
 		do {
@@ -9,14 +9,16 @@ public class YachtDice {
 			r3 = 1 + (int)(Math.random()*6);
 			r4 = 1 + (int)(Math.random()*6);
 			r5 = 1 + (int)(Math.random()*6);
+			r6 = 1 + (int)(Math.random()*6);
 			System.out.print("\nYou rolled: " + r1 + " " + r2 + " ");
-			System.out.println(r3 + " " + r4 + " " + r5);
+			System.out.println(r3 + " " + r4 + " " + r5 + " " + r6);
 			showDice(r1);
 			showDice(r2);
 			showDice(r3);
 			showDice(r4);
 			showDice(r5);
-			allSame = ( (r1==r2) && (r2==r3) && (r3==r4) && (r4==r5) );
+			showDice(r6);
+			allSame = ( (r1==r2) && (r2==r3) && (r3==r4) && (r4==r5) && (r5==r6) );
 		
 		
 		} while (!allSame);
