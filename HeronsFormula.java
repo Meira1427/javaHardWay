@@ -25,4 +25,6 @@ public class HeronsFormula {
 		// After computing the area, you must "return" the computed value:
 		return A;
 	}
+	
+	// #1. the file without functions is much longer with lots of repetitive code
 }
