@@ -49,12 +49,12 @@ public class PigDice {
 						turnTotal += roll;
 						System.out.print("\tComputer has " + turnTotal);
 						System.out.print(" points so far this round.\n");
-						if (turnTotal < 20) {
+						if ((turnTotal < 20) && ((ctot + turnTotal) < 100)) {
 							System.out.println("\tComputer will roll again.");
 						}
 					} 
 				
-				} while ((roll != 1) && (turnTotal < 20) );
+				} while ((roll != 1) && (turnTotal < 20) && ((ctot + turnTotal) < 100) );
 				
 				ctot += turnTotal;
 				System.out.print("\tComputer ends the round with ");
