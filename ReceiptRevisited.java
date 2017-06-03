@@ -14,7 +14,7 @@ public class ReceiptRevisited {
 		String gapG, gapT;
 		
 		System.out.println("Welcome to the Corner Store. Our gas costs " + price + " per gallon.");
-		System.out.print("How many gallons did you buy?");
+		System.out.print("How many gallons do you want?");
 		gallons = getCleanDouble();
 		gallons = reasonableGallons(gallons);
 		total = price*gallons;
@@ -30,6 +30,10 @@ public class ReceiptRevisited {
 		*/
 		gapG = mindTheGap(5, lengthG);
 		gapT = mindTheGap(6, lengthT);
+		
+		System.out.println("Total cost: " + total);
+		System.out.print("\nWriting customized receipt to 'receipt.txt'. . . ");
+		
 	
 		fileout.println("+---------------------------+");
 		fileout.println("|                           |");
@@ -44,6 +48,8 @@ public class ReceiptRevisited {
 		fileout.println("|                           |");
 		fileout.println("+---------------------------+");
 		fileout.close();
+		
+		System.out.println("done");
 
 	}
 	
