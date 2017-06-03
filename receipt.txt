@@ -2,11 +2,11 @@
 |                           |
 |       CORNER STORE        |
 |                           |
-|   2017-06-02   08:59PM    |
+|   2017-06-02   09:32PM    |
 |                           |
-|  Gallons:         12.464  |
-|  Price/gallon:    $3.459  |
+|  Gallons:          38.34  |
+|  Price/gallon:    $2.459  |
 |                           |
-|  Fuel total:      $43.11  |
+|  Fuel total:       94.29  |
 |                           |
 +---------------------------+
