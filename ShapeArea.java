@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ShapeArea {
 	public static void main(String[] args) {
-		Scanner keyboard = new Scanner(System.in);
+		//Scanner keyboard = new Scanner(System.in);
 		int choice;
 		double area = 0;
 		
@@ -17,32 +17,32 @@ public class ShapeArea {
 			System.out.println("4) Square");
 			System.out.println("5) Quit");
 			System.out.print("> ");
-			choice = keyboard.nextInt();
+			choice = getCleanInt();
 			
 			if (choice == 1) {
 				System.out.print("\nBase: ");
-				int b = keyboard.nextInt();
+				int b = getCleanInt();
 				System.out.print("Height: ");
-				int h = keyboard.nextInt();
+				int h = getCleanInt();
 				area = computeTriangleArea(b, h);
 				System.out.println("The area of your triangle is " + area);
 			}
 			else if (choice == 2) {
 				System.out.print("\nRadius: ");
-				int radius = keyboard.nextInt();
+				int radius = getCleanInt();
 				area = computeCircleArea(radius);
 				System.out.println("The area of your circle is " + area);
 			}
 			else if (choice == 3) {
 				System.out.print("\nLength: ");
-				int q = keyboard.nextInt();
+				int q = getCleanInt();
 				System.out.print("Width: ");
-				int w = keyboard.nextInt();
+				int w = getCleanInt();
 				System.out.println("The area of your rectangle is " + computeRectangleArea(q, w));
 			}
 			else if (choice == 4) {
 				System.out.print("\nSide: ");
-				int s = keyboard.nextInt();
+				int s = getCleanInt();
 				System.out.println("The area of your square is " + computeSquareArea(s));
 			}
 			else if (choice != 5) {
@@ -51,6 +51,15 @@ public class ShapeArea {
 		
 		} while (choice != 5);
 	
+	}
+	
+	public static int getCleanInt() {
+		Scanner scanner = new Scanner(System.in);
+		while(!scanner.hasNextInt()) {
+			System.out.print("Please enter an integer: ");
+			scanner.next();
+		}
+		return scanner.nextInt();
 	}
 	
 	public static double computeTriangleArea(int base, int height) {
@@ -65,7 +74,7 @@ public class ShapeArea {
 		return A;
 	}
 	
-	public static int computeRectangleArea(int length, int width) {
+	public static double computeRectangleArea(int length, int width) {
 		return (length * width);
 	}
 	
