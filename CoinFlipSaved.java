@@ -17,8 +17,8 @@ public class CoinFlipSaved {
 				bestName = input.next();
 				best = input.nextInt();
 			input.close();
-			System.out.print("High score is " + best);
-			System.out.println(" flips in a row by " + bestName);
+			System.out.print("\nHigh score is " + best);
+			System.out.println(" flips in a row by " + bestName + "\n");
 		}
 		else {
 			System.out.println("Save game file doesn't exist or is empty.");
@@ -55,6 +55,11 @@ public class CoinFlipSaved {
 			System.out.print("Your name: ");
 			bestName = keyboard.next();
 			best = streak;
+			//Save this name and high score to the file.
+			PrintWriter out = new PrintWriter(f);
+				out.println(bestName);
+				out.println(best);
+			out.close();
 		}
 		else if (streak == best) {
 			System.out.println("That ties the high score. Cool!");
@@ -64,11 +69,6 @@ public class CoinFlipSaved {
 			System.out.println(streak + " if you want a high score.");
 		}
 		
-		//Save this name and high score to the file.
-		PrintWriter out = new PrintWriter(f);
-			out.println(bestName);
-			out.println(best);
-		out.close();
 	}
 
 }
