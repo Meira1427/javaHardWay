@@ -31,5 +31,9 @@ public class GettingWholeFile {
 		
 		System.out.println(fourLetter + " four-letter words in " + fn1);
 		System.out.println(caps + " words start with capitals in " + fn2);
+		
+		/*
+		Here are some More Words to count the Capitals
+		*/
 	}
 }
