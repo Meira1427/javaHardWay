@@ -39,8 +39,7 @@ public class CoinFlipSaved {
 			if (gotHeads) {
 				streak++;
 				System.out.println("\tThat's " + streak + " in a row. . . .");
-				System.out.print("\tWould you like to flip again (y/n)? ");
-				again = keyboard.next();	
+				again = getCleanAnswer();
 			}
 			else {
 				streak = 0;
@@ -69,6 +68,21 @@ public class CoinFlipSaved {
 			System.out.println(streak + " if you want a high score.");
 		}
 		
+	}
+	
+	/* Returns a proper answer y or n */
+	public static String getCleanAnswer () {
+		Scanner scanner = new Scanner(System.in);
+		boolean clean = false;
+		String answer = "no";
+		while (!clean) {
+			System.out.print("\tWould you like to flip again (y/n)? ");
+			answer = scanner.next().toLowerCase();
+			if ( answer.equals("y") || answer.equals("n") ) {
+				clean = true;
+			}
+		}
+		return answer;	
 	}
 
 }
