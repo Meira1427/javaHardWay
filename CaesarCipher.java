@@ -29,8 +29,9 @@ public class CaesarCipher {
 		
 		System.out.print("Message: ");
 		plaintext = keyboard.nextLine();
-		System.out.print("Shift (0-26): ");
-		shift = keyboard.nextInt();
+		
+		shift = getProperShift(0);
+		System.out.println("Shift is " + shift);
 		
 		for (int i=0; i<plaintext.length(); i++) {
 			cipher += shiftLetter(plaintext.charAt(i), shift);
@@ -39,5 +40,23 @@ public class CaesarCipher {
 		System.out.println(cipher);
 	
 	}	
+	
+	public static int getProperShift(int num) {
+		while ( (num <= 0) || (num > 26) ) {
+			num = getCleanInt();	
+		}
+	
+		return num;
+	}
+	
+	public static int getCleanInt() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Shift (0-26): ");
+		while(!scanner.hasNextInt()){
+			System.out.print("Enter a Number Please (0-26): ");
+			scanner.next();
+		}
+		return scanner.nextInt();
+	}
 	
 }
