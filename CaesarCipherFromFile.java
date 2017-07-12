@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
+import java.io.PrintWriter;
 
 public class CaesarCipherFromFile {
 	/**
@@ -21,10 +22,13 @@ public class CaesarCipherFromFile {
 		for (int i=0; i<plaintext.length(); i++) {
 			cipher += shiftLetter(plaintext.charAt(i), shift);
 		}
+		
+		PrintWriter fileout = new PrintWriter("my-cypher.txt");
 	
-		System.out.println(plaintext);
-		System.out.println(shift);
-		System.out.println(cipher);
+		fileout.println("The secret message is: " + cipher);
+		fileout.close();
+		
+		System.out.println("Secret message printed to secret file!");
 	
 	}	
 		 
