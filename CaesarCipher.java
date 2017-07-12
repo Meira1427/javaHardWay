@@ -15,7 +15,10 @@ public class CaesarCipher {
 		  || Character.isLowerCase(c) && (u > 'z') ) {
 		  	u -=26;
 		}
-		
+		if (Character.isUpperCase(c) && (u < 'A')
+		  || Character.isLowerCase(c) && (u < 'a') ) {
+		  	u += 26;
+		}
 		return (char)u;
 	}
 	
