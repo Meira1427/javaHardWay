@@ -19,8 +19,13 @@ public class CountingFor {
 			System.out.println(n + ". " + message);
 		}
 		
+		/*
+		When you remove the init statement from the below loop, it uses the "n" from the
+		previous for loop. That n is now 55 from right before the last loop ended. So instead
+		of counting 3. . . 2. . . 1. . . it counts down from 55
+		*/
 		System.out.println("\nFinally, three times counting backward.");
-		for (n = 3; n > 0; n -= 1) {
+		for (; n > 0; n -= 1) {
 			System.out.println(n + ". " + message);
 		}
 	}
