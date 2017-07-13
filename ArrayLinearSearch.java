@@ -14,13 +14,13 @@ public class ArrayLinearSearch {
 		for (num : orderNumbers) {
 		     ^
 		2 errors
+		Note: changed it back
 		*/
-		int num;
 		
 		System.out.println("There are " + orderNumbers.length + "in the database.");
 		
 		System.out.print("Orders: ");
-		for (num : orderNumbers) {
+		for (int num : orderNumbers) {
 			System.out.print(num + "   ");
 		}
 		System.out.println();
@@ -28,7 +28,7 @@ public class ArrayLinearSearch {
 		System.out.print("Which order to find? ");
 		toFind = keyboard.nextInt();
 		
-		for (num : orderNumbers) {
+		for (int num : orderNumbers) {
 			if ( num == toFind ) {
 				System.out.println(num + " found.");
 			}
