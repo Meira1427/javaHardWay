@@ -5,6 +5,7 @@ public class ArrayLinearSearch {
 		Scanner keyboard = new Scanner(System.in);
 		int[] orderNumbers = { 12345, 54321, 101010, 8675309, 31415, 271828 };
 		int toFind;
+		boolean found = false;
 		
 		/* Study Drill #1: try declaring int num up here instead of in the for each loops
 		ArrayLinearSearch.java:15: error: bad initializer for for-loop
@@ -31,7 +32,11 @@ public class ArrayLinearSearch {
 		for (int num : orderNumbers) {
 			if ( num == toFind ) {
 				System.out.println(num + " found.");
+				found = true;
 			}
+		}
+		if(!found) {
+			System.out.println("Please check your number and try again.");
 		}
 	}
 }
