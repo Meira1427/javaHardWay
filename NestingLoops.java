@@ -2,8 +2,8 @@ public class NestingLoops {
 	public static void main(String[] args) {
 		// this is #1 - I'll call it "CN"
 		/* ********************************************************************
-		  Study Drill 1 - The inner loop changes it's variable faster A1 A2 A3
-		  Study Drill 2 - switching "c" and "n" loop - Call this "NC"
+		  	Study Drill 1 - The inner loop changes its variable faster A1 A2 A3
+		  	Study Drill 2 - switching "c" and "n" loop - Call this "NC"
 		                    inner loop faster, now A1 B1 C1 D1 E1 
 		   ********************************************************************/
 		                    
