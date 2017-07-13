@@ -8,7 +8,8 @@ public class CaesarCipher {
 		Scanner keyboard = new Scanner(System.in);
 		String newtext = "";
 		String cipher = "";
-		String decode = "";
+		String toDecode = "";
+		String decoded = "";
 		String userOption = "";
 		int shift;
 		
@@ -27,8 +28,21 @@ public class CaesarCipher {
 			System.out.println(cipher);
 			
 		}
+		/* getUserChoice will only return an "E" or a "D". Choice was
+		   decrypt "D" if program reaches this else clause */
 		else {
-			System.out.println("Reached Decrypt\t" + userOption);
+			System.out.print("Message to Decrypt: ");
+			toDecode = keyboard.nextLine();
+		
+			shift = getProperShift(30);
+			System.out.println(shift);
+			shift = 26-shift;
+			
+			for (int i=0; i<toDecode.length(); i++) {
+				decoded += shiftLetter(toDecode.charAt(i), shift);
+			}
+	
+			System.out.println(decoded);
 		}
 	
 	}	
