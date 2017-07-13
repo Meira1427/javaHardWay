@@ -2,8 +2,37 @@ import java.util.Scanner;
 
 public class CaesarCipher {
 	/**
-	 * Returns the character shifted by the given number of letters.
+	 * Coding or Translating a Caesar Cipher
 	 */
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		String newtext = "";
+		String cipher = "";
+		String decode = "";
+		String userOption = "";
+		int shift;
+		
+		userOption = getUserOption();
+		
+		if (userOption.equals("E")) {
+			System.out.print("Message to Encrypt: ");
+			newtext = keyboard.nextLine();
+		
+			shift = getProperShift(30);
+		
+			for (int i=0; i<newtext.length(); i++) {
+				cipher += shiftLetter(newtext.charAt(i), shift);
+			}
+	
+			System.out.println(cipher);
+			
+		}
+		else {
+			System.out.println("Reached Decrypt\t" + userOption);
+		}
+	
+	}	
+	
 	public static char shiftLetter(char c, int n) {
 		int u = c;
 		
@@ -22,23 +51,15 @@ public class CaesarCipher {
 		return (char)u;
 	}
 	
-	public static void main(String[] args) {
-		Scanner keyboard = new Scanner(System.in);
-		String plaintext, cipher = "";
-		int shift;
-		
-		System.out.print("Message: ");
-		plaintext = keyboard.nextLine();
-		
-		shift = getProperShift(30);
-		
-		for (int i=0; i<plaintext.length(); i++) {
-			cipher += shiftLetter(plaintext.charAt(i), shift);
+	public static String getUserOption() {
+		Scanner scanner = new Scanner(System.in);
+		String temp = "x";
+		while(!(temp.equals("E") || temp.equals("D"))) {
+			System.out.print("Do you wish to encrypt or decrypt a message? (E or D) ");
+			temp = scanner.next().toUpperCase();
 		}
-	
-		System.out.println(cipher);
-	
-	}	
+		return temp;
+	}
 	
 	public static int getProperShift(int num) {
 		while ( (num < 0) || (num > 26) ) {
