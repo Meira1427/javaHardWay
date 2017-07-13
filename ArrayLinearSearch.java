@@ -6,10 +6,21 @@ public class ArrayLinearSearch {
 		int[] orderNumbers = { 12345, 54321, 101010, 8675309, 31415, 271828 };
 		int toFind;
 		
+		/* Study Drill #1: try declaring int num up here instead of in the for each loops
+		ArrayLinearSearch.java:15: error: bad initializer for for-loop
+		for (num : orderNumbers) {
+		     ^
+		ArrayLinearSearch.java:23: error: bad initializer for for-loop
+		for (num : orderNumbers) {
+		     ^
+		2 errors
+		*/
+		int num;
+		
 		System.out.println("There are " + orderNumbers.length + "in the database.");
 		
 		System.out.print("Orders: ");
-		for (int num : orderNumbers) {
+		for (num : orderNumbers) {
 			System.out.print(num + "   ");
 		}
 		System.out.println();
@@ -17,7 +28,7 @@ public class ArrayLinearSearch {
 		System.out.print("Which order to find? ");
 		toFind = keyboard.nextInt();
 		
-		for (int num : orderNumbers) {
+		for (num : orderNumbers) {
 			if ( num == toFind ) {
 				System.out.println(num + " found.");
 			}
