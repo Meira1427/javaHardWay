@@ -1,6 +1,6 @@
 public class ArraySlotAccess {
 	public static void main(String[] args) {
-		int[] arr = new int[3];
+		int[] arr = new int[1000];
 		
 		// we almost always use a for loop to access each slot of an array
 		for (int i=0 ; i<arr.length ; i++ ) {
