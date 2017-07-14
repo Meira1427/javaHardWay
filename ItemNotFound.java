@@ -10,21 +10,21 @@ public class ItemNotFound {
 			"Ganymede", "Hector", "Iolaus", "Jason", "Meleager", "Odysseus", 
 			"Orpheus", "Perseus", "Theseus" };
 		String guess;
-		boolean found;
+		// Study Drill # 1: Change it to a count instead of a boolean
+		int count = 0;
 		
 		System.out.println("Pop Quiz!");
 		System.out.print("Name any *mortal* hero from Greek mythology: ");
 		guess = keyboard.next();
 		
-		found = false;
 		for (String hero : heroes) {
 			if (guess.equals(hero)) {
 				System.out.println("That's one of them!");
-				found = true;
+				count++;
 			}
 		}
 		
-		if (!found) {
+		if (count == 0) {
 			System.out.println("No, " + guess + " wasn't a Greek mortal hero.");
 		}
 	}	
