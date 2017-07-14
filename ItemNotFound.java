@@ -24,7 +24,7 @@ public class ItemNotFound {
 			}
 		}
 		
-		if (found == false) {
+		if (!found) {
 			System.out.println("No, " + guess + " wasn't a Greek mortal hero.");
 		}
 	}	
