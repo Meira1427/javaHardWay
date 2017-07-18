@@ -9,14 +9,21 @@ public class LowestTemperature {
 		System.out.println(temps.length + " temperatures in database.");
 		
 		double lowest = 9999.99;
+		double highest = 0;
 		
 		for (int i=0; i<temps.length; i++) {
 			if (temps[i] < lowest) {
 				lowest = temps[i];
 			}
+			if (temps[i] > highest) {
+				highest = temps[i];
+			}
 		}
+		
 		System.out.print("The lowest average daily temperature was ");
 		System.out.println(lowest + "F (" + fToC(lowest) + "C)");
+		System.out.print("The highest average daily temperature was ");
+		System.out.println(highest + "F (" + fToC(highest) + "C)");
 	}
 	
 	public static double[] arrayFromUrl(String url) throws Exception {
@@ -33,6 +40,8 @@ public class LowestTemperature {
 	}
 	
 	public static double fToC(double f) {
-		return (f-32)*5/9;
+		double temp = (f-32)*5/9;
+		temp = Math.floor(temp*10)/10;
+		return temp;
 	}
 }
