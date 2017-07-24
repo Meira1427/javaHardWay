@@ -7,7 +7,7 @@ class Address {
 
 public class MailingAddresses {
 	public static void main(String[] args) {
-		Address uno, dos, tres;
+		Address uno, dos, tres, other;
 		
 		uno = new Address();
 		uno.street 	= "191 Marigold Lane";
@@ -27,11 +27,19 @@ public class MailingAddresses {
 		tres.state	= "NC";
 		tres.zip	= 28601;
 		
+		other = new Address();
+		other.street= "1234 MyStreet Circle";
+		other.city	= "Centennial";
+		other.state	= "CO";
+		other.zip	= 80112;
+		
 		System.out.println(uno.street);
 		System.out.println(uno.city + ", " + uno.state + "  " + uno.zip);
 		System.out.println("\n" + dos.street);
 		System.out.println(dos.city + ", " + dos.state + "  " + dos.zip);
 		System.out.println("\n" + tres.street);
 		System.out.println(tres.city + ", " + tres.state + "  " + tres.zip);
+		System.out.println("\n" + other.street);
+		System.out.println(other.city + ", " + other.state + "  " + other.zip);
 	}
 }
