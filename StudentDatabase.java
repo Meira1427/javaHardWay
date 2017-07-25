@@ -37,8 +37,6 @@ public class StudentDatabase {
 		db[3].credits = 59;
 		db[3].gpa = 4.0;
 		
-		
-		
 		for (int i=0; i<db.length; i++) {
 			System.out.println("Name: " + db[i].name);
 			System.out.println("\tCredit hours: " + db[i].credits);
@@ -46,14 +44,19 @@ public class StudentDatabase {
 		}
 		
 		int maxLoc = 0;
+		int fewCredits = 0;
 		
 		for (int i=1; i<db.length; i++) {
 			if (db[i].gpa > db[maxLoc].gpa) {
 				maxLoc = i;
 			}
+			if (db[i].credits < db[fewCredits].credits) {
+				fewCredits = i;
+			}
 		}
 		
 		System.out.println(db[maxLoc].name + " has the hightest GPA.");
+		System.out.println(db[fewCredits].name + " has the fewest number of credits.");
 
 	}
 }
