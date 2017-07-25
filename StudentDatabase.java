@@ -7,7 +7,15 @@ class Student {
 public class StudentDatabase {
 	public static void main(String[] args) {
 		Student[] db;
-		db = new Student[3];
+		/* Study Drill #1. Give the database a capacity for 4 students, but don't fill
+		them all. This will compile but it will fail during the for loop at lines 30-34.
+		This is because it reaches a point when db[3] is null. I'm not sure why it doesn't
+		just print out null null null. I guess because db[3] is null, but db[3].name does
+		not have a value of null in it, it just doesn't exist. This is error:
+		"Exception in thread "main" java.lang.NullPointerException
+			at StudentDatabase.main(StudentDatabase.java:31)"
+		*/
+		db = new Student[4];
 		
 		db[0] = new Student();
 		db[0].name = "Esteban";
