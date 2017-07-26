@@ -52,18 +52,33 @@ public class TemperaturesByDate2 {
 				countFeb++;
 			}
 		}
+		/*
+		Study Drill #3
+		Attempt to print out a full record of TemperatureSample class
+		Appears to just print out a pointer of where to find the data
+		This is what gets printed for three below:
+		TemperatureSample@2503dbd3
+		TemperatureSample@4b67cf4d
+		TemperatureSample@7ea987ac
+		*/
+		TemperatureSample ts0 = tempDB[0];
+		TemperatureSample ts233 = tempDB[233];
+		TemperatureSample ts6000 = tempDB[6000];
 		
 		avgNov = totalNov/countNov;
 		avgNov = roundToOneDecimal(avgNov);
-		System.out.print("Average daily temperature over " + countNov);
+		System.out.print("\nAverage daily temperature over " + countNov);
 		System.out.println(" days in November: " + avgNov);
-		System.out.print("Highest daily average temperature over " + countFeb);
+		System.out.print("\nHighest daily average temperature over " + countFeb);
 		System.out.println(" days in February: " + highFeb);
-		System.out.print("Highest daily avg temp over period from ");
+		System.out.print("\nHighest daily avg temp over period from ");
 		System.out.print(tempDB[0].month + "-" + tempDB[0].day + "-" + tempDB[0].year + " to ");
 		System.out.print(tempDB[numRecords-1].month + "-" + tempDB[numRecords-1].day + "-"); 
 		System.out.println(tempDB[numRecords-1].year + " was " + highTemp);
-
+		System.out.println("\n");
+		System.out.println(ts0);
+		System.out.println(ts233);
+		System.out.println(ts6000);
 	}
 	
 	public static double roundToOneDecimal(double d) {
