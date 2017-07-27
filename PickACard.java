@@ -15,9 +15,13 @@ public class PickACard {
 		
 		int chosen = (int)(Math.random()*deck.length);
 		Card picked = deck[chosen];
-		
+		/*
 		System.out.println("You picked a " + picked + " out of the deck,");
 		System.out.println("worth " + picked.value + " points in Blackjack.");
+		*/
+		
+		shuffleDeck(deck);
+		displayDeck(deck);
 	}
 	
 	public static Card[] buildDeck() {
@@ -51,5 +55,18 @@ public class PickACard {
 		for(Card c: deck) {
 			System.out.println(c.value + "\t" + c);
 		}	
+	}
+	
+	public static void shuffleDeck(Card[] deck) {
+		Card hold1, hold2;
+		int slot1, slot2;
+		for(int i=0; i<1000; i++) {
+			slot1 = (int)(Math.random()*deck.length);
+			slot2 = (int)(Math.random()*deck.length);
+			hold1 = deck[slot1];
+			hold2 = deck[slot2];
+			deck[slot1] = hold2;
+			deck[slot2] = hold1;
+		}
 	}
 }
