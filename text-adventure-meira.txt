@@ -1,0 +1,226 @@
+16
+0
+HALLWAY
+You are in a large circular room with five brightly colored doors. The room 
+is humid, muggy, and unpleasant. You wish to leave. Choose a door.
+
+The "red" door is tall and warm to the touch.
+When you near the rounded "yellow" door, you hear a deep snore.
+The "blue" door is short and narrow with a glass handle.
+The "purple" door is stylish with black accents.
+Faint music comes from behind the arched "green" door.
+%%
+red:1
+yellow:2
+blue:3
+purple:4
+green:5
+%%
+1
+RED
+You enter a room built out of red bricks. Two tables are set for dinner. 
+A fire pit, with a gently crackling fire, is on the far end of the room. 
+A blob of pizza dough and the makings for a pizza are spread out on a wooden 
+table near the fire pit.
+
+You can choose to make a "pizza" or go "back".
+%%
+pizza:6
+make pizza:6
+go back:0
+back:0
+%%
+2
+YELLOW
+You step into a dim cave with a sleeping dragon. Bones and random items of 
+treasure litter the floor. The door slams behind you and the dragon awakens. 
+He doesn't look very happy.
+
+You can choose to "feed" the dragon, "fight" the dragon, or "pet" the dragon.
+Or you can try the door handle and go "back".
+%%
+feed:7
+feed the dragon:7
+feed dragon:7
+fight:8
+fight the dragon:8
+fight dragon:8
+pet:9
+pet the dragon:9
+pet dragon:9
+go back:0
+back:0
+%%
+3
+BLUE
+You enter a beautiful bathroom with windows overlooking a waterfall. 
+The deep bathtub is filled with hot water.
+
+Take a "bath" or go "back".
+%%
+bath:12
+take bath:12
+back:0
+go back:0
+%%
+4
+PURPLE
+This room has off-white walls, lavendar carpet, and black furniture. In one 
+corner, a large desk with a leather chair holds a computer and some books.
+
+You can sit down and look at the "computer" or go "back".
+%%
+computer:13
+sit down:13
+back:0
+go back:0
+%%
+5
+GREEN
+You step outdoors into a beautiful garden with large trees and flowering 
+plants. You walk along a path until you come upon a comfortable chair near 
+a fountain. A book is lying on a table next to a glass of water. It looks 
+comfortable.
+
+You can take a "nap", read the "book", or go "back".
+%%
+nap:15
+sleep:15
+take a nap:15
+read:14
+book:14
+read the book:14
+back:0
+go back:0
+%%
+6
+PIZZA
+A blind, old man with a service dog emerges from the shadows. He smiles and
+thanks you for making the pizza. You invite him to sit down and share the meal
+with you, also setting out a plate for his dog. He tells you stories about his
+life while you dine. He is grateful for your hospitality and friendship. At 
+the end of the meal, he pulls from his pocket the keys to a classic Jaguar 
+convertible. Obviously, he cannot drive, so he offers the car to you. 
+
+(Type "exit" to go drive the car)
+%%
+exit:-1
+%%
+7
+FEED
+A sign on the wall says that the dragon only eats grass fed cows and an 
+occasional human. Do you have any grass fed cows?
+
+"yes" or "no"
+%%
+yes:10
+no:11
+%%
+8
+FIGHT
+You are a brave person. A jewel-encrusted sword lies six feet to your right. 
+You grab the sword and swing it around wildly. The dragon is neither impressed 
+nor amused. It is all or nothing now, so you lunge, pointing the sword between 
+the dragon's eyes. A direct hit! The dragon falls. As you recover, you notice the 
+sound of voices behind a door that was previously hidden by the dragon. You open 
+the door and out pour a dozen children of various ages. They explain that they 
+have been prisoners of the dragon for many months. You pull out your cell phone, 
+call the authorities, and let the older children call their parents. 
+
+Many hours later, grateful parents reunite with their children, lavish you with 
+awards, and the mayor of the city invites you to a celebration in your honor.
+
+(Type "exit" to get ready for the party)
+%%
+exit:-1
+%%
+9
+PET
+You're one of those touchy-feely types, aren't you? THIS is a BAD idea. 
+You lose your arm. You're lucky it's not your life.
+
+(Type "exit" to go to the hospital. Now!)
+%%
+exit:-1
+%%
+10
+YES_COW
+You magically produce a grass fed cow which satisfies the dragon. He is lulled 
+to sleep. Before he begins to snore, you hear the faint sound of voices behind 
+a door on the far side of the room. Tiptoeing, so as to not awaken the  dragon, 
+you open the door. Inside are a dozen children of various ages. They explain that 
+they have been prisoners of the dragon for many months. You pull out your cell phone, 
+call the authorities, and let the older children call their parents. Problem is, 
+you are now all trapped in this room behind the dragon.
+
+No worries. A SWAT team arrives, takes out the dragon, and rescues you and 
+the children. 
+
+(Type "exit" to go the the parade in honor of the first responders)
+%%
+exit:-1
+%%
+11
+NO_COW
+Naturally, you don't have a grass fed cow. Realizing that the dragon is willing 
+to eat the occasional human, you have no choice but to go back. Unfortunately, 
+the door is stuck. You need to rethink the options. What were they?
+
+"Feed" the dragon, "Fight" the dragon, "Pet" the dragon.
+%%
+feed:7
+feed the dragon:7
+feed dragon:7
+fight:8
+fight the dragon:8
+fight dragon:8
+pet:9
+pet the dragon:9
+pet dragon:9
+%%
+12
+BATH
+You settle in to a hot bath and enjoy the view. As you rest, your mind drifts, 
+and you imagine the plot for a blockbuster movie. As the water cools, you are
+refreshed and ready to write.
+
+(Type "exit" to go write the screenplay)
+%%
+exit:-1
+%%
+13
+COMPUTER
+You sit down at the desk and look at the computer. A PDF for 'Learn Java the 
+Hard Way' is up on the screen. You peruse the book, do the exercises, and find 
+you really have a knack for computer programming. You spend night and day in this 
+room. (Stopping only to make yourself an occasional pizza). You love coding so much 
+that you begin to search for a coding boot camp. Since you know Java is the bomb, 
+the choice is easy. You manage to get accepted by the Skill Distillery in Colorado 
+and begin to plan your future.
+
+(Type "exit" to go study software development)
+%%
+exit:-1
+%%
+14
+BOOK
+You enjoy a peaceful afternoon reading a great fantasy book.
+
+Go "back" or take a "nap".
+%%
+go back:0
+back:0
+sleep:15
+nap:15
+take a nap:15
+take nap:15
+go to sleep:15
+%%
+15
+SLEEP
+Excellent choice. Who needs an adventure game anyway?
+
+(Type "exit")
+%%
+exit:-1
+%%
