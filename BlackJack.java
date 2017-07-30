@@ -12,7 +12,10 @@ class Card {
 /*
 In this game, I have the dealer trying to beat user's hand unless it is a tie or user busted.
 When you say "yes" to play again, the deck is shuffled with all 52 cards and the hands are reset to null
-A flaw in this game is that the Ace is always 11. Will need to modify in future to make Ace an optional 1
+** Update **
+I believe this now handles the Ace correctly, switching it to a value of 1 when count gets too high. However,
+I have not encountered two aces, so I should probably prompt for whether or not user wants one to be 11
+and the other to be a one.
 */
 
 public class BlackJack {
@@ -56,8 +59,10 @@ public class BlackJack {
 			cardsDrawn++;
 			houseHandCount++;
 			
+			//displayDeck(deck); //for debugging
+			
 			//Display user hand, but not dealer before prompting for hit
-			System.out.print("User drew a ");
+			System.out.print("\nUser drew a ");
 			displayHand(userHand, userHandCount);
 			System.out.println("\nWorth a total of " + getTotal(userHand, userHandCount) + " points");
 			
@@ -68,6 +73,11 @@ public class BlackJack {
 				System.out.println(userHand[userHandCount].name + " of " + userHand[userHandCount].suit);
 				cardsDrawn++;
 				userHandCount++;
+				if ((getTotal(userHand, userHandCount) > 21) && (aceInHand(userHand, userHandCount))) {
+					System.out.println("User switching an Ace");
+					int a = locationOfAce(userHand, userHandCount);
+					userHand[a].value = 1;
+				}
 				System.out.println("New Total is " + getTotal(userHand, userHandCount) + " points");
 				if (getTotal(userHand, userHandCount) > 21) {
 					userBusted = true;
@@ -82,11 +92,16 @@ public class BlackJack {
 				houseHand[houseHandCount] = deck[cardsDrawn];
 				cardsDrawn++;
 				houseHandCount++;
+				if ((getTotal(houseHand, houseHandCount) > 21) && (aceInHand(houseHand, houseHandCount))) {
+					System.out.println("House switching an Ace");
+					int a = locationOfAce(houseHand, houseHandCount);
+					houseHand[a].value = 1;
+				}
 				if (getTotal(houseHand, houseHandCount) > 21) {
 					houseBusted = true;
 				}
 			}
-	
+			System.out.println("House total cards " + houseHandCount);
 			System.out.print("\nHouse drew a ");
 			displayHand(houseHand, houseHandCount);
 			System.out.println("\nWorth a total of " + getTotal(houseHand, houseHandCount) + " points");
@@ -146,10 +161,21 @@ public class BlackJack {
 	
 	public static void displayHand(Card[] hand, int size) {
 		for(int i=0; i<size; i++) {
-			System.out.print(hand[i] + ", ");
+			System.out.print(hand[i]);
+			if (i<(size-1)) {
+				System.out.print(", ");
+				}
 			if (i==(size-2)) {
 				System.out.print("and a ");
 			}
+		}
+		System.out.print(".");
+	}
+	
+	//for entire deck only!
+	public static void displayDeck(Card[] deck) {
+		for(int i=0; i<52; i++) {
+			System.out.print(deck[i].name + " " + deck[i].value + "\t");
 		}
 	}
 	
@@ -159,6 +185,26 @@ public class BlackJack {
 			total += hand[i].value;
 		}
 		return total;
+	}
+	
+	public static boolean aceInHand(Card[] hand, int size) {
+		boolean found = false;
+		for (int i=0; i<size; i++) {
+			if (hand[i].name.equals("Ace")) {
+				found = true;
+			}
+		}
+		return found;
+	}
+	
+	public static int locationOfAce(Card[] hand, int size) {
+		int location = 0;
+		for (int i=0; i<size; i++) {
+			if (hand[i].name.equals("Ace")) {
+				location = i;
+			}
+		}
+		return location;
 	}
 	
 	public static void shuffleDeck(Card[] deck) {
